@@ -1,0 +1,64 @@
+{
+  "valid_users": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@example.com",
+      "password": "SecurePass123!",
+      "phone": "+1234567890",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "USA"
+      }
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "SecurePass456!",
+      "phone": "+1987654321",
+      "address": {
+        "street": "456 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90210",
+        "country": "USA"
+      }
+    }
+  ],
+  "admin_users": [
+    {
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@example.com",
+      "password": "AdminPass123!",
+      "role": "admin"
+    }
+  ],
+  "invalid_users": [
+    {
+      "first_name": "",
+      "last_name": "Test",
+      "email": "invalid@example.com",
+      "password": "Test123!",
+      "expected_error": "First name is required"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "invalid-email",
+      "password": "Test123!",
+      "expected_error": "Please enter a valid email"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "test@example.com",
+      "password": "123",
+      "expected_error": "Password must be at least 8 characters"
+    }
+  ]
+}
